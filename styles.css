@@ -141,6 +141,7 @@ body {
 /* Sections */
 .section {
   padding-top: 94px;
+  padding-bottom: 94px;
   margin: 0;
 }
 .section-title {
@@ -155,6 +156,10 @@ body {
 
 .features.list {
   display: flex;
+}
+
+.no-pudding-button {
+  padding-bottom: 0;
 }
 
 .features.list .item:not(:last-child) {
@@ -192,8 +197,8 @@ body {
   background-color: var(--bg-white-color);
 }
 
-.team .item:not(:last-child) {
-  margin-right: 30px;
+.team .item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .section-team {
@@ -224,16 +229,22 @@ body {
 .project {
   display: flex;
   flex-wrap: wrap;
-  background-color: teal;
 }
 .project .item {
-  border: 1px solid #eeeeee;
   width: calc((100%-60px) / 3);
-  background-color: navy;
 }
 
 .project .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.border {
+  margin-top: -5px;
+  width: 370px;
+  border-top: 1px solid transparent;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 .project-title {
   color: var(--title-text-color);
@@ -328,12 +339,10 @@ body {
 }
 .container {
   width: 1200px;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0 auto;
 }
-.padding {
-  padding-bottom: 94px;
-}
+
 .hidden {
   content-visibility: hidden;
   margin: 0;
