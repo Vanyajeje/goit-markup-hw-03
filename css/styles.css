@@ -17,7 +17,17 @@
   --bg-darc-color: #2f303a;
   --bg-grey-color: #f5f4fa;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: var(--bg-white-color);
   color: var(--primary-text-color);
@@ -106,6 +116,9 @@ body {
 }
 
 .site-info a {
+  padding: 32px 0;
+  text-align: center;
+
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -124,8 +137,6 @@ body {
 .hero {
   background-color: var(--bg-darc-color);
   text-align: center;
-}
-.hero-div {
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -245,7 +256,7 @@ body {
   flex-wrap: wrap;
 }
 .project .item {
-  /* width: calc((100%-60px) / 3); */
+  width: calc((100%-60px) / 3);
   width: 370px;
 }
 
@@ -311,6 +322,10 @@ body {
   background-color: var(--bg-grey-color);
   font-weight: 500;
   padding: 6px 22px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  font-family: inherit;
+  border: transparent;
 }
 .filter:hover,
 .filter:focus {
