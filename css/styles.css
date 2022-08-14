@@ -111,6 +111,10 @@ body {
   margin-left: auto;
 }
 
+.site-info a {
+  padding: 32px 0;
+}
+
 .site-info .item + .item {
   margin-left: 30px;
 }
@@ -122,13 +126,11 @@ body {
 
 .tel {
   fill: currentColor;
-  margin-right: 8px;
-  text-align: center;
+  margin-right: 5px;
 }
 
 .align {
   display: flex;
-  margin: -2px;
 }
 
 .site-info > .item {
