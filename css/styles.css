@@ -16,6 +16,7 @@
   --bg-white-color: #ffffff;
   --bg-darc-color: #2f303a;
   --bg-grey-color: #f5f4fa;
+  --client-color: #afb1b8;
 }
 h1,
 h2,
@@ -108,17 +109,36 @@ body {
 .site-info {
   display: flex;
   margin-left: auto;
-  padding: 32px 0;
 }
 
 .site-info .item + .item {
-  margin-left: 50px;
+  margin-left: 30px;
+}
+.mail {
+  display: block;
+  fill: currentColor;
+  margin-right: 8px;
+}
+
+.tel {
+  fill: currentColor;
+  margin-right: 8px;
+  text-align: center;
+}
+
+.align {
+  display: flex;
+  margin: -2px;
+}
+
+.site-info > .item {
+  display: flex;
+  align-items: center;
+  padding: 32px, 0;
 }
 
 .site-info a {
-  padding: 32px 0;
-  text-align: center;
-
+  padding: 32px, 0;
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -139,6 +159,15 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  min-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-text {
@@ -178,6 +207,18 @@ body {
   display: flex;
 }
 
+.features .icon-thumb {
+  width: 270px;
+  height: 120px;
+  text-align: center;
+  background-color: var(--bg-grey-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.features .icon-thumb .icon {
+  margin-top: 25px;
+}
+
 .no-pudding-button {
   padding-bottom: 0;
 }
@@ -210,7 +251,7 @@ body {
   display: flex;
 }
 
-.team .item {
+.team > .item {
   border: 0px solid transparent;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -242,10 +283,83 @@ body {
   line-height: 1.19;
 
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 
   text-align: center;
 }
+
+.social-networks {
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+
+.sn-link:hover,
+.sn-link:focus {
+  fill: var(--bg-white-color);
+}
+
+.social-networks .item:hover,
+.social-networks .item:focus {
+  background-color: var(--accent-text-color);
+}
+
+.sn-link {
+  fill: var(--primary-text-color);
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+}
+
+.social-networks .item + .item {
+  margin-left: 10px;
+}
+.social-networks .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  border: 0;
+  margin: 0;
+  width: 44px;
+  height: 44px;
+}
+/* CLIENTS */
+.client {
+  color: var(--client-color);
+  display: block;
+}
+
+.clients .item + .item {
+  margin-left: 30px;
+}
+
+.client:hover,
+.client:focus {
+  color: var(--accent-text-color);
+}
+.clients {
+  display: flex;
+}
+.clients .icon-thumb {
+  width: 170px;
+  height: 92px;
+  text-align: center;
+
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+.clients .icon-thumb .icon {
+  margin-top: 16px;
+  fill: currentColor;
+}
+
+.no-pudding-button {
+  padding-bottom: 0;
+}
+
 /* PORTFOLIO */
 .portfolio {
   padding-top: 94px;
@@ -254,6 +368,11 @@ body {
 .project {
   display: flex;
   flex-wrap: wrap;
+}
+
+.project .item:hover,
+.project .item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .project .item {
@@ -294,7 +413,7 @@ body {
   background-color: var(--accent-text-color);
   cursor: pointer;
   padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   border-radius: 4px;
   border-color: transparent;
 
@@ -331,6 +450,7 @@ body {
 .filter:focus {
   color: var(--white-text-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Footer */
 .footer {
@@ -351,7 +471,48 @@ body {
 .address-info .item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-sn-links-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
 
+  text-transform: uppercase;
+
+  color: var(--bg-white-color);
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-social-networks {
+  display: flex;
+}
+.footer-social-networks .item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-networks .item:hover,
+.footer-social-networks .item:focus {
+  background-color: var(--accent-text-color);
+}
+
+.footer-social-networks .item + .item {
+  margin-left: 10px;
+}
+.footer-social-networks .sn-link {
+  fill: var(--bg-white-color);
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+}
+
+.footer .container {
+  display: flex;
+}
+.column + .column {
+  margin-left: 70px;
+}
 .text,
 .adress {
   font-size: 14px;
