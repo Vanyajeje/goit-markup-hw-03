@@ -288,6 +288,9 @@ body {
   text-align: center;
 }
 
+main {
+}
+
 .social-networks {
   justify-content: space-between;
   display: flex;
